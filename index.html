@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>elad proflio</title>
+
+  <!-- Premium fonts (clean + Apple-ish) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+  <link rel="stylesheet" href="assets/css/liquid-glass.css" />
+</head>
+
+<body>
+  <!-- Background layers -->
+  <div class="bg">
+    <div class="bg-noise" aria-hidden="true"></div>
+    <div class="bg-blobs" aria-hidden="true">
+      <span class="blob b1"></span>
+      <span class="blob b2"></span>
+      <span class="blob b3"></span>
+    </div>
+  </div>
+
+  <!-- Top Navigation -->
+  <header class="topbar glass">
+    <div class="topbar__left">
+      <a class="brand" href="#" data-go="0" aria-label="Go to Home">
+        <img class="brand__mark" src="assets/media/eld.png" alt="logo">
+      <span class="brand__text">elad</span>
+      </a>
+      <div class="pill">
+        <span class="dot-live"></span>
+        <span class="pill__text">Available for projects</span>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav__link" data-go="0">Home</button>
+<button class="nav__link" data-go="1">Services</button>
+      <button class="nav__link" data-go="2">About</button>
+</nav>
+
+    <div class="topbar__right">
+      <button id="themeBtn" class="iconbtn" aria-label="Toggle theme" title="Toggle theme">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+      </button>
+      <button id="cmdBtn" class="iconbtn" aria-label="Open quick actions" title="Quick actions">
+        <i class="fa-solid fa-bolt"></i>
+      </button>
+      <a class="btn btn--primary" href="#"
+         id="ctaBtn" data-open="contactModal">
+        <i class="fa-solid fa-paper-plane"></i>
+        <span>Start a project</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Slide Navigation (dots) -->
+  <aside class="dots" aria-label="Slide navigation">
+    <button class="dot is-active" data-go="0" aria-label="Home"></button>
+    <button class="dot" data-go="1" aria-label="Services"></button>
+    <button class="dot" data-go="2" aria-label="About"></button>
+  </aside>
+
+  <!-- Bottom controls -->
+  <div class="bottombar">
+    <button class="chip" id="prevBtn">
+      <i class="fa-solid fa-arrow-left"></i> Prev
+    </button>
+    <button class="chip" id="nextBtn">
+      Next <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+
+  <!-- Pages (slide-based, no scroll between pages) -->
+  <main class="deck" id="deck" aria-live="polite">
+    <!-- PAGE 0 -->
+    <section class="page" data-page="0">
+  <div class="page__inner">
+    <div class="hero">
+      <div class="hero__copy">
+        <div class="eyebrow">
+          <i class="fa-solid fa-sparkles"></i>
+          <span>Video • Motion • Web</span>
+        </div>
+
+        <h1 class="h1">
+          Premium edits, motion design, and websites—
+          <span class="grad">built to feel expensive.</span>
+        </h1>
+
+        <p class="lead">
+          Professional work in Adobe After Effects + clean modern web development.
+          Fast delivery. Sharp visuals. Smooth interactions.
+        </p>
+
+        <div class="hero__actions">
+          <button class="btn btn--primary" data-open="contactModal">
+            <i class="fa-solid fa-rocket"></i>
+            Start a project
+          </button>
+          <button class="btn btn--ghost" data-go="1">
+            <i class="fa-solid fa-grid-2"></i>
+            Explore services
+          </button>
+          <button class="btn btn--ghost" data-open="reelModal">
+            <i class="fa-solid fa-circle-play"></i>
+            Watch showreel
+          </button>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="device glass">
+          <div class="device__top">
+            <span class="dotc r"></span><span class="dotc y"></span><span class="dotc g"></span>
+            <span class="device__title">Preview</span>
+            <span class="device__right">AE • WEB</span>
+          </div>
+
+          <div class="device__screen">
+            <div class="preview">
+              <div class="preview__badge">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>Some Projects</span>
+              </div>
+
+              <div class="preview__grid">
+  <div class="preview__stack preview__stack--media">
+
+  <div class="stackcard s1">
+    <img src="assets/media/web1.png" alt="Website 1">
+  </div>
+
+  <div class="stackcard s2">
+    <img src="assets/media/web2.png" alt="Website 2">
+  </div>
+
+  <div class="stackcard s3">
+    <div class="stackvideo">
+      <i class="fa-solid fa-play"></i>
+      <span>Video</span>
+    </div>
+  </div>
+
+  <div class="stackcard s4">
+    <div class="stackvideo">
+      <i class="fa-solid fa-play"></i>
+      <span>Video</span>
+    </div>
+  </div>
+
+</div>
+
+              <div class="preview__stats">
+                <div class="stat">
+                  <div class="stat__top"><i class="fa-solid fa-gauge-high"></i> Speed</div>
+                  <div class="stat__val">Fast delivery</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__top"><i class="fa-solid fa-gem"></i> Quality</div>
+                  <div class="stat__val">Premium finish</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__top"><i class="fa-solid fa-shield"></i> Trust</div>
+                  <div class="stat__val">Clear process</div>
+                </div>
+              </div>
+
+              <div class="preview__cta">
+                <button class="pillbtn" data-open="contactModal">
+                  Get a quote <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="pillbtn pillbtn--ghost" data-go="1">
+                  Services <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating glass">
+          <div class="floating__title">Quick Links</div>
+          <div class="floating__grid">
+            <button class="smallbtn" data-open="linksModal"><i class="fa-solid fa-link"></i> Links</button>
+            <button class="smallbtn" data-go="1"><i class="fa-solid fa-grid-2"></i> Services</button>
+            <button class="smallbtn" data-open="contactModal"><i class="fa-solid fa-envelope"></i> Contact</button>
+            <button class="smallbtn" data-open="cmdModal"><i class="fa-solid fa-bolt"></i> Actions</button>
+          </div>
+          <div class="floating__hint muted">You’ll add your real links later.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PAGE 2 -->
+    <section class="page" data-page="1">
+      <div class="page__inner">
+        <h2 class="h2">Services</h2>
+
+        <div class="servicegrid">
+          <div class="service glass">
+            <div class="service__icon"><i class="fa-solid fa-clapperboard"></i></div>
+            <div class="service__body">
+              <h3 class="h3">Video Editing</h3>
+              <p>Commercials, YouTube, short-form, music videos. Story-first edits.</p>
+              <div class="bullets">
+                <span class="b"><i class="fa-solid fa-check"></i> Clean cuts</span>
+                <span class="b"><i class="fa-solid fa-check"></i> Sound design</span>
+                <span class="b"><i class="fa-solid fa-check"></i> Color & polish</span>
+              </div>
+              <div class="service__actions">
+                <button class="btn btn--small btn--primary" data-open="contactModal">Get pricing</button>
+                <button class="btn btn--small btn--ghost" data-open="estimateModal">Quick estimate</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="service glass">
+            <div class="service__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <div class="service__body">
+              <h3 class="h3">Motion & Visual Design</h3>
+              <p>After Effects motion packs, logo animations, typography and effects.</p>
+              <div class="bullets">
+                <span class="b"><i class="fa-solid fa-check"></i> Smooth easing</span>
+                <span class="b"><i class="fa-solid fa-check"></i> 4K renders</span>
+                <span class="b"><i class="fa-solid fa-check"></i> Brand-safe</span>
+              </div>
+              <div class="service__actions">
+                <button class="btn btn--small btn--primary" data-open="contactModal">Get pricing</button>
+                <button class="btn btn--small btn--ghost" data-open="reelModal">See reel</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="service glass">
+            <div class="service__icon"><i class="fa-solid fa-code"></i></div>
+            <div class="service__body">
+              <h3 class="h3">Web Development</h3>
+              <p>Landing pages, portfolios, product sites—modern UI with animation.</p>
+              <div class="bullets">
+                <span class="b"><i class="fa-solid fa-check"></i> Responsive</span>
+                <span class="b"><i class="fa-solid fa-check"></i> SEO-ready</span>
+                <span class="b"><i class="fa-solid fa-check"></i> Performance</span>
+              </div>
+              <div class="service__actions">
+                <button class="btn btn--small btn--primary" data-open="contactModal">Get pricing</button>
+                <button class="btn btn--small btn--ghost" data-open="stackModal">Tech stack</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3 -->
+    <section class="page" data-page="2">
+      <div class="page__inner">
+        <h2 class="h2">About</h2>
+        <div class="about">
+          <div class="about__left glass">
+            <div class="avatar">
+              <div class="avatar__ring"></div>
+              <div class="avatar__inner">
+                <i class="fa-solid fa-user"></i>
+              </div>
+            </div>
+            <h3 class="h3">elad</h3>
+            <p class="muted">
+              Video editor • Motion designer (After Effects) • Web developer.
+              I combine design taste with technical execution.
+            </p>
+
+            <div class="about__cta">
+              <button class="btn btn--primary" data-open="contactModal"><i class="fa-solid fa-paper-plane"></i> Contact</button>
+              <button class="btn btn--ghost" data-open="linksModal"><i class="fa-solid fa-link"></i> Links</button>
+            </div>
+
+            <div class="chips">
+              <span class="chip2"><i class="fa-solid fa-fire"></i> Fast</span>
+              <span class="chip2"><i class="fa-solid fa-gem"></i> Premium</span>
+              <span class="chip2"><i class="fa-solid fa-layer-group"></i> Clean</span>
+              <span class="chip2"><i class="fa-solid fa-shield"></i> Reliable</span>
+            </div>
+          </div>
+
+          <div class="about__right">
+            <div class="panel glass">
+              <div class="panel__head">
+                <h3 class="h3">Capabilities</h3>
+                <button class="iconbtn iconbtn--tiny" data-open="stackModal" aria-label="Open stack">
+                  <i class="fa-solid fa-microchip"></i>
+                </button>
+              </div>
+
+              <div class="meters">
+                <div class="meter">
+                  <div class="meter__top"><span>Editing</span><span class="muted">Advanced</span></div>
+                  <div class="meter__bar"><span style="width:88%"></span></div>
+                </div>
+                <div class="meter">
+                  <div class="meter__top"><span>Motion</span><span class="muted">Advanced</span></div>
+                  <div class="meter__bar"><span style="width:90%"></span></div>
+                </div>
+                <div class="meter">
+                  <div class="meter__top"><span>Web</span><span class="muted">Strong</span></div>
+                  <div class="meter__bar"><span style="width:82%"></span></div>
+                </div>
+                <div class="meter">
+                  <div class="meter__top"><span>UI/UX</span><span class="muted">Strong</span></div>
+                  <div class="meter__bar"><span style="width:80%"></span></div>
+                </div>
+              </div>
+
+              <div class="quote">
+                <i class="fa-solid fa-quote-left"></i>
+                <p>
+                  “My goal is simple: make it feel premium—visually, technically, and emotionally.”
+                </p>
+              </div>
+            </div>
+
+            <div class="panel glass">
+              <div class="panel__head">
+                <h3 class="h3">Workflow</h3>
+                <button class="iconbtn iconbtn--tiny" data-open="howModal" aria-label="Open workflow">
+                  <i class="fa-solid fa-route"></i>
+                </button>
+              </div>
+
+              <div class="steps">
+                <div class="step"><span class="num">1</span><div><b>Plan</b><div class="muted">Reference + goals</div></div></div>
+                <div class="step"><span class="num">2</span><div><b>Design</b><div class="muted">Motion style + layout</div></div></div>
+                <div class="step"><span class="num">3</span><div><b>Build</b><div class="muted">Edit / animate / develop</div></div></div>
+                <div class="step"><span class="num">4</span><div><b>Deliver</b><div class="muted">Exports + revisions</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+</main>
+
+  <!-- MODALS -->
+  <div class="modal" id="contactModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel glass" role="dialog" aria-modal="true" aria-label="Start a project">
+      <div class="modal__head">
+        <div>
+          <div class="modal__title">Start a project</div>
+        </div>
+        <button class="iconbtn" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal__body">
+        <div class="quickcards">
+          <button class="qcard" data-prefill="Video Editing"><i class="fa-solid fa-film"></i><span>Video</span></button>
+          <button class="qcard" data-prefill="Image Design"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Image</span></button>
+          <button class="qcard" data-prefill="Web Development"><i class="fa-solid fa-code"></i><span>Web</span></button>
+        </div>
+        <div class="row2">
+          <label class="lab">
+            <span>Budget</span>
+            <select id="modalBudget">
+              <option>Im not sure.. give me a offer!</option>
+              <option>$46 - $300</option>
+            </select>
+          </label>
+        </div>
+        <label class="lab">
+          <span>Message</span>
+          <textarea id="modalMsg" rows="5" placeholder="Describe your project..."></textarea>
+        </label>
+        <div class="modal__actions">
+          <button class="btn btn--primary" id="modalSend"><i class="fa-solid fa-paper-plane"></i> Compose email</button>
+          <button class="btn btn--ghost" data-close>Cancel</button>
+        </div>
+        <p class="tiny muted">No backend yet—this will open your email app with a prefilled message.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="reelModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel glass modal__panel--wide" role="dialog" aria-modal="true" aria-label="Showreel">
+      <div class="modal__head">
+        <div>
+          <div class="modal__title">Showreel</div>
+          <div class="modal__sub muted">Drop your Vimeo/YouTube link later.</div>
+        </div>
+        <button class="iconbtn" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal__body">
+        <div class="videoPlaceholder">
+          <div class="vp__icon"><i class="fa-solid fa-circle-play"></i></div>
+          <div class="vp__text">
+            <b>Placeholder</b>
+            <div class="muted">Embed your reel here (Vimeo / YouTube / MP4).</div>
+          </div>
+          <button class="btn btn--primary" data-open="linksModal"><i class="fa-solid fa-link"></i> Add link later</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="linksModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel glass" role="dialog" aria-modal="true" aria-label="Links">
+      <div class="modal__head">
+        <div>
+          <div class="modal__title">Your links</div>
+        </div>
+        <button class="iconbtn" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal__body">
+        <div class="linklist">
+          <div class="linkrow"><i class="fa-brands fa-instagram"></i><span>Instagram</span><button class="btn btn--small btn--ghost" data-copy="https://www.instagram.com/13elad/">Copy Link</button></div>
+          <div class="linkrow"><i class="fa-brands fa-youtube"></i><span>YouTube</span><button class="btn btn--small btn--ghost" data-copy="https://www.youtube.com/@eld_16">Copy Link</button></div>
+          <div class="linkrow"><i class="fa-brands fa-vimeo"></i><span>Discord</span><button class="btn btn--small btn--ghost" data-copy="eld1110">Copy Username</button></div>
+          <div class="linkrow"><i class="fa-brands fa-behance"></i><span>TikTok</span><button class="btn btn--small btn--ghost" data-copy="https://www.tiktok.com/@eld.aep?is_from_webapp=1&sender_device=pc">Copy Link</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="howModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel glass" role="dialog" aria-modal="true" aria-label="Workflow">
+      <div class="modal__head">
+        <div>
+          <div class="modal__title">Workflow</div>
+          <div class="modal__sub muted">A clean process keeps everything fast and premium.</div>
+        </div>
+        <button class="iconbtn" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal__body">
+        <div class="timeline2">
+          <div class="titem"><span class="ticon"><i class="fa-solid fa-bullseye"></i></span><div><b>Brief</b><div class="muted">Goal, references, formats</div></div></div>
+          <div class="titem"><span class="ticon"><i class="fa-solid fa-pen-ruler"></i></span><div><b>Design</b><div class="muted">Look, rhythm, motion style</div></div></div>
+          <div class="titem"><span class="ticon"><i class="fa-solid fa-wand-magic-sparkles"></i></span><div><b>Production</b><div class="muted">Edit, animate, develop</div></div></div>
+          <div class="titem"><span class="ticon"><i class="fa-solid fa-box"></i></span><div><b>Delivery</b><div class="muted">Exports + revisions</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="estimateModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel glass" role="dialog" aria-modal="true" aria-label="Estimate">
+      <div class="modal__head">
+        <div>
+          <div class="modal__title">Quick estimate</div>
+          <div class="modal__sub muted">Just a helper — you’ll set real pricing later.</div>
+        </div>
+        <button class="iconbtn" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal__body">
+        <div class="est">
+          <label class="lab">
+            <span>Service</span>
+            <select id="estService">
+              <option value="video">Video Editing</option>
+              <option value="motion">Motion Design</option>
+              <option value="web">Web Development</option>
+            </select>
+          </label>
+          <label class="lab">
+            <span>Complexity</span>
+            <select id="estComplex">
+              <option value="1">Simple</option>
+              <option value="2">Medium</option>
+              <option value="3">High</option>
+            </select>
+          </label>
+          <label class="lab">
+            <span>Deadline</span>
+            <select id="estDeadline">
+              <option value="1">Flexible</option>
+              <option value="2">Soon</option>
+              <option value="3">Urgent</option>
+            </select>
+          </label>
+        </div>
+        <div class="estout glass">
+          <div class="muted">Suggested range</div>
+          <div class="big" id="estResult">$ —</div>
+          <div class="tiny muted">This is only UI logic. You will customize it.</div>
+        </div>
+        <div class="modal__actions">
+          <button class="btn btn--primary" id="estCalc"><i class="fa-solid fa-calculator"></i> Calculate</button>
+          <button class="btn btn--ghost" data-open="contactModal"><i class="fa-solid fa-paper-plane"></i> Ask for quote</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="stackModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel glass" role="dialog" aria-modal="true" aria-label="Tech stack">
+      <div class="modal__head">
+        <div>
+          <div class="modal__title">Stack</div>
+          <div class="modal__sub muted">Tools used to deliver premium results.</div>
+        </div>
+        <button class="iconbtn" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal__body">
+        <div class="stack">
+          <span class="tag2"><i class="fa-solid fa-video"></i> After Effects</span>
+          <span class="tag2"><i class="fa-solid fa-image"></i> Photoshop</span>
+          <span class="tag2"><i class="fa-solid fa-wave-square"></i> Sound Design</span>
+          <span class="tag2"><i class="fa-solid fa-code"></i> HTML / CSS / JS</span>
+          <span class="tag2"><i class="fa-solid fa-bolt"></i> Animation</span>
+          <span class="tag2"><i class="fa-solid fa-gauge-high"></i> Performance</span>
+          <span class="tag2"><i class="fa-solid fa-shield"></i> Clean UI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="workModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel glass" role="dialog" aria-modal="true" aria-label="Work item">
+      <div class="modal__head">
+        <div>
+          <div class="modal__title" id="workTitle">Work item</div>
+          <div class="modal__sub muted">Placeholder detail modal. Add real links later.</div>
+        </div>
+        <button class="iconbtn" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal__body">
+        <div class="detail">
+          <div class="detail__thumb glass">
+            <i class="fa-solid fa-image"></i>
+            <span class="muted">Thumbnail placeholder</span>
+          </div>
+          <div class="detail__info">
+            <div class="muted">What you’ll add later</div>
+            <ul class="plist">
+              <li><i class="fa-solid fa-check"></i> Link to video / page</li>
+              <li><i class="fa-solid fa-check"></i> Short description</li>
+              <li><i class="fa-solid fa-check"></i> Tools and time</li>
+            </ul>
+            <div class="modal__actions">
+              <button class="btn btn--primary" data-open="linksModal"><i class="fa-solid fa-link"></i> Add link</button>
+              <button class="btn btn--ghost" data-open="contactModal"><i class="fa-solid fa-paper-plane"></i> Request similar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick actions / Command palette -->
+  <div class="modal" id="cmdModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel glass" role="dialog" aria-modal="true" aria-label="Quick actions">
+      <div class="modal__head">
+        <div>
+          <div class="modal__title">Quick actions</div>
+          <div class="modal__sub muted">Press <b>Ctrl</b> + <b>K</b> anywhere.</div>
+        </div>
+        <button class="iconbtn" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal__body">
+        <input class="cmd" id="cmdInput" placeholder="Type an action… (home, work, services, contact)" />
+        <div class="cmdlist" id="cmdList">
+          <button class="cmditem" data-go="0"><i class="fa-solid fa-house"></i> Go to Home</button>
+<button class="cmditem" data-go="1"><i class="fa-solid fa-grid-2"></i> Go to Services</button>
+          <button class="cmditem" data-go="2"><i class="fa-solid fa-user"></i> Go to About</button>
+<button class="cmditem" data-open="reelModal"><i class="fa-solid fa-circle-play"></i> Open Showreel</button>
+          <button class="cmditem" data-open="linksModal"><i class="fa-solid fa-link"></i> Open Links</button>
+          <button class="cmditem" data-open="estimateModal"><i class="fa-solid fa-calculator"></i> Open Estimate</button>
+          <button class="cmditem" id="cmdTheme"><i class="fa-solid fa-circle-half-stroke"></i> Toggle Theme</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <i class="fa-solid fa-check"></i>
+    <span id="toastText">Copied</span>
+  </div>
+
+  <script src="assets/js/liquid-glass.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
